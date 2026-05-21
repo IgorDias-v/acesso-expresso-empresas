@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AE Empresas — Portal B2B de Estacionamento · JCPM Shoppings</title>
+<meta name="description" content="Gestão de estacionamento para toda a sua frota. Gerencie o acesso de todos os veículos da sua empresa via tag — Sem Parar, ConectCar, Veloe e Taggy — em um único painel.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER (sticky) — Figma 122:4657
+     ═══════════════════════════════════════════════════════════ -->
+<header class="site-header fixed top-0 left-0 right-0 z-50" id="site-header">
+  <div class="container-page flex items-center justify-between h-[68px]">
+
+    <!-- Brands -->
+    <div class="brand-group">
+      <a href="#" class="brand-mark brand-mark--ae" aria-label="Acesso Expresso Empresas — Home">
+        <img src="../img/Logo_AcessoExpresso_Empresas.svg" alt="Acesso Expresso Empresas" />
+      </a>
+      <span class="brand-divider hidden sm:inline-block" aria-hidden="true"></span>
+      <a href="#" class="brand-mark brand-mark--rio hidden sm:inline-flex" aria-label="RioMar Recife">
+        <img src="../img/Logo_RioMar.svg" alt="RioMar Recife" />
+      </a>
+    </div>
+
+    <!-- Actions -->
+    <nav class="flex items-center gap-2.5">
+      <a href="#login" class="btn-pill btn-pill--ghost" aria-label="Acessar conta">
+        <iconify-icon icon="solar:user-linear" aria-hidden="true"></iconify-icon>
+        <span class="hidden sm:inline">Acessar</span>
+      </a>
+      <a href="#cadastro" class="btn-pill btn-pill--primary">
+        Cadastrar empresa
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════ -->
+<section class="hero pt-[68px]">
+  <div class="container-page relative" style="min-height: 640px;">
+
+    <!-- Cars composition (right side) -->
+    <div class="hero-cars">
+      <div class="hero-cars-img"></div>
+    </div>
+
+    <!-- Status — Table Cell mockups floating over the cars -->
+    <div class="hero-cars">
+      <div class="status-cell point-br badge-processo">
+        <span class="status-pill warning">Processando</span>
+      </div>
+      <div class="status-cell point-br badge-bloqueado">
+        <span class="status-pill danger">Bloqueado</span>
+      </div>
+      <div class="status-cell point-tr badge-ativo">
+        <span class="status-pill success">Ativo</span>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content max-w-2xl pt-20 pb-24 md:pt-28 md:pb-32 relative">
+
+      <span class="hero-badge reveal inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-full" data-delay="100">
+        <span class="badge-dot w-1.5 h-1.5 rounded-full"></span>
+        Novo · Portal B2B de estacionamento
+      </span>
+
+      <h1 class="hero-h1 text-white mt-6" style="font-size: clamp(40px, 6vw, 64px);">
+        <span class="clip-mask" data-delay="100"><span>Gestão de estacionamento</span></span>
+        <span class="clip-mask" data-delay="200"><span>para toda a sua frota</span></span>
+      </h1>
+
+      <p class="reveal text-white/75 text-base md:text-lg mt-6 max-w-lg leading-relaxed" data-delay="500">
+        Gerencie o acesso de todos os veículos da sua empresa via tag —
+        Sem Parar, ConectCar, Veloe e Taggy — em um único painel.
+      </p>
+
+      <div class="reveal flex flex-wrap items-center gap-3 mt-8" data-delay="700">
+        <a href="#cadastro" class="btn-primary-dark inline-flex items-center gap-2 text-sm font-semibold px-7 py-3.5 rounded-full">
+          Cadastrar empresa
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION / FEATURES
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section-features py-20 md:py-28">
+  <div class="container-page">
+
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="h2 display-font reveal">Por que usar o Acesso Expresso Empresas?</h2>
+      <p class="body-md mt-3 reveal" data-delay="100">
+        Tudo que sua empresa precisa para gerenciar acessos de estacionamento.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-[10px]">
+
+      <!-- Feature 1 -->
+      <article class="feature-card reveal" data-delay="200">
+        <div class="feature-illustration">
+          <img src="../img/CAR%203D.png" alt="" class="illus-3d illus-3d--car" />
+        </div>
+        <h3 class="h3">Gestão centralizada</h3>
+        <p class="body-md mt-2">
+          Cadastre, bloqueie e acompanhe todos os veículos da frota em um painel único, com histórico completo de acessos.
+        </p>
+      </article>
+
+      <!-- Feature 2 -->
+      <article class="feature-card reveal" data-delay="300">
+        <div class="feature-illustration">
+          <img src="../img/Mask%20group.png" alt="" class="illus-3d illus-3d--receipt" />
+        </div>
+        <h3 class="h3">Recibos automáticos</h3>
+        <p class="body-md mt-2">
+          Todos os acessos geram recibos automáticos disponíveis para download em PDF. Facilite o processo de reembolso.
+        </p>
+      </article>
+
+      <!-- Feature 3 -->
+      <article class="feature-card reveal" data-delay="400">
+        <div class="feature-illustration">
+          <img src="../img/FONE%203D.png" alt="" class="illus-3d illus-3d--headphones" />
+        </div>
+        <h3 class="h3">Suporte prioritário</h3>
+        <p class="body-md mt-2">
+          Atendimento especializado para empresas via WhatsApp. Nossa equipe está pronta para ajudar sua equipe.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION / COMO FUNCIONA
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section-como py-20 md:py-28">
+  <div class="container-page">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+      <!-- Steps (left) -->
+      <div class="lg:col-span-6">
+        <h2 class="h2 display-font reveal">Como funciona</h2>
+        <p class="body-md mt-3 reveal" data-delay="100">
+          Comece a usar em 4 passos simples.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
+
+          <div class="step-item reveal" data-delay="200">
+            <span class="step-num is-visible" style="animation-delay: 0.4s;">01</span>
+            <div>
+              <h4 class="h4">Cadastre sua empresa</h4>
+              <p class="body-md mt-1.5">
+                Informe CNPJ, dados do representante e crie sua senha de acesso.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-item reveal" data-delay="300">
+            <span class="step-num is-visible" style="animation-delay: 0.55s;">02</span>
+            <div>
+              <h4 class="h4">Aguarde a aprovação</h4>
+              <p class="body-md mt-1.5">
+                Nossa equipe analisa o cadastro em até 35 dias úteis e envia confirmação por e-mail.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-item reveal" data-delay="400">
+            <span class="step-num is-visible" style="animation-delay: 0.7s;">03</span>
+            <div>
+              <h4 class="h4">Adicione seus veículos</h4>
+              <p class="body-md mt-1.5">
+                Cadastre placas e vincule as tags de cada veículo da frota.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-item reveal" data-delay="500">
+            <span class="step-num is-visible" style="animation-delay: 0.85s;">04</span>
+            <div>
+              <h4 class="h4">Gerencie tudo aqui</h4>
+              <p class="body-md mt-1.5">
+                Acesse, bloqueie, consulte recibos e muito mais pelo portal.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Illustration (right) — fills lateral, bleeds right, hidden on mobile -->
+      <div class="lg:col-span-6 reveal" data-delay="200">
+        <div class="como-illustration">
+          <div class="como-car-wrap">
+            <div class="como-car-ring"></div>
+            <img src="../img/Carro.png" alt="" class="como-car-img" />
+            <span class="headlight headlight--top" aria-hidden="true"></span>
+            <span class="headlight headlight--bottom" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION / TAGS ACEITAS
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section-tags py-16 md:py-20">
+  <div class="container-page">
+
+    <p class="eyebrow text-center mb-8 reveal">Tags aceitas</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+
+      <!-- Veloe -->
+      <div class="tag-card reveal" data-delay="100">
+        <img src="../img/Icons_tag/Veloe.png" alt="Veloe" />
+        <span class="tag-name">Veloe</span>
+      </div>
+
+      <!-- Sem Parar -->
+      <div class="tag-card reveal" data-delay="200">
+        <img src="../img/Icons_tag/SemParar.png" alt="Sem Parar" />
+        <span class="tag-name">Sem Parar</span>
+      </div>
+
+      <!-- Taggy -->
+      <div class="tag-card reveal" data-delay="300">
+        <img src="../img/Icons_tag/Taggy.png" alt="Taggy" />
+        <span class="tag-name">Taggy</span>
+      </div>
+
+      <!-- ConectCar -->
+      <div class="tag-card reveal" data-delay="400">
+        <img src="../img/Icons_tag/ConectCar.png" alt="ConectCar" />
+        <span class="tag-name">ConectCar</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION / FAQ
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section-faq py-20 md:py-28">
+  <div class="container-page">
+
+    <h2 class="h2 display-font text-center mb-10 reveal">Perguntas frequentes</h2>
+
+    <div class="max-w-2xl mx-auto" id="faq">
+
+      <div class="faq-item reveal" data-delay="100" data-open="false">
+        <button class="faq-header" aria-expanded="false">
+          <span>Quais operadoras de tag são aceitas?</span>
+          <iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron text-lg"></iconify-icon>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            Aceitamos as quatro principais operadoras do Brasil: Sem Parar, Veloe, ConectCar e Taggy. Você pode vincular tags de operadoras diferentes para cada veículo da frota.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="150" data-open="false">
+        <button class="faq-header" aria-expanded="false">
+          <span>Quantos veículos posso cadastrar?</span>
+          <iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron text-lg"></iconify-icon>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            Não há limite para a quantidade de veículos por empresa. O cadastro é dimensionado conforme o porte da sua frota.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="200" data-open="false">
+        <button class="faq-header" aria-expanded="false">
+          <span>Como funciona o faturamento?</span>
+          <iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron text-lg"></iconify-icon>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            O faturamento é mensal, consolidado em uma única fatura por CNPJ. Você recebe relatório detalhado com todos os acessos registrados, facilitando reembolso e controle financeiro.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="250" data-open="false">
+        <button class="faq-header" aria-expanded="false">
+          <span>Qual o prazo para aprovação do cadastro?</span>
+          <iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron text-lg"></iconify-icon>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            A análise leva até 35 dias úteis após o envio da documentação completa. Você acompanha o status diretamente pelo portal e recebe atualizações por e-mail.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="300" data-open="false">
+        <button class="faq-header" aria-expanded="false">
+          <span>Posso bloquear um acesso temporariamente?</span>
+          <iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron text-lg"></iconify-icon>
+        </button>
+        <div class="faq-body">
+          <div class="faq-body-inner">
+            Sim. O bloqueio temporário pode ser ativado e desativado a qualquer momento pelo portal, sem custo adicional. Ideal para veículos em manutenção ou colaboradores em férias.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION / CTA FINAL
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section-cta-final py-20 md:py-28 relative">
+  <div class="container-page text-center relative z-10">
+
+    <h2 class="h2 display-font reveal" style="color: white; font-size: clamp(32px, 5vw, 48px);">
+      Pronto para começar?
+    </h2>
+    <p class="reveal mt-4 max-w-md mx-auto text-base md:text-lg" style="color: rgba(255,255,255,0.75);" data-delay="100">
+      Cadastre sua empresa agora e gerencie todos os acessos de estacionamento da sua frota.
+    </p>
+
+    <div class="reveal mt-9 flex justify-center" data-delay="200">
+      <a href="#cadastro" class="btn-light">
+        Cadastrar empresa
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════ -->
+<footer class="site-footer py-10">
+  <div class="container-page flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+
+    <a href="#" class="inline-flex" aria-label="JCPM Shoppings">
+      <img src="../img/Logo_JCPM.svg" alt="JCPM Shoppings" class="h-10 w-auto object-contain" />
+    </a>
+
+    <p class="text-xs">© 2026 Todos os direitos reservados.</p>
+
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCRIPTS
+     ═══════════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  'use strict';
+
+  // 1. Reveal on scroll
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal, .clip-mask, .step-num').forEach((el) => {
+    revealObserver.observe(el);
+  });
+
+  // 2. Header glass on scroll
+  const header = document.getElementById('site-header');
+  const handleScroll = () => {
+    if (window.scrollY > 24) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // 3. Accordion FAQ
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item) => {
+    const header = item.querySelector('.faq-header');
+    const body   = item.querySelector('.faq-body');
+    const inner  = item.querySelector('.faq-body-inner');
+
+    header.addEventListener('click', () => {
+      const isOpen = item.dataset.open === 'true';
+
+      // Close all
+      faqItems.forEach((i) => {
+        i.dataset.open = 'false';
+        i.querySelector('.faq-header').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-body').style.maxHeight = '0px';
+      });
+
+      // Open clicked (if it wasn't already open)
+      if (!isOpen) {
+        item.dataset.open = 'true';
+        header.setAttribute('aria-expanded', 'true');
+        body.style.maxHeight = inner.scrollHeight + 24 + 'px';
+      }
+    });
+  });
+
+  // 4. Flashlight effect on feature cards
+  document.querySelectorAll('.feature-card').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', x + '%');
+      card.style.setProperty('--my', y + '%');
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--mx', '50%');
+      card.style.setProperty('--my', '50%');
+    });
+  });
+
+  // 5. Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
