@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=person" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
@@ -28,16 +29,19 @@
       <a href="#" class="brand-mark brand-mark--ae" aria-label="Acesso Expresso Empresas — Home">
         <img src="../img/Logo_AcessoExpresso_Empresas.svg" alt="Acesso Expresso Empresas" />
       </a>
-      <span class="brand-divider hidden sm:inline-block" aria-hidden="true"></span>
-      <a href="#" class="brand-mark brand-mark--rio hidden sm:inline-flex" aria-label="RioMar Recife">
-        <img src="../img/Logo_RioMar.svg" alt="RioMar Recife" />
+      <span class="brand-divider" aria-hidden="true"></span>
+      <a href="#" class="brand-mark brand-mark--rio" aria-label="RioMar Recife">
+        <picture>
+          <source media="(max-width: 639px)" srcset="../img/ICON_RIOMAR.svg" />
+          <img src="../img/Logo_RioMar.svg" alt="RioMar Recife" />
+        </picture>
       </a>
     </div>
 
-    <!-- Actions -->
-    <nav class="flex items-center gap-2.5">
+    <!-- Actions (desktop) -->
+    <nav class="header-actions flex items-center gap-2.5">
       <a href="#login" class="btn-pill btn-pill--ghost" aria-label="Acessar conta">
-        <iconify-icon icon="solar:user-linear" aria-hidden="true"></iconify-icon>
+        <span class="material-symbols-outlined" aria-hidden="true">person</span>
         <span class="hidden sm:inline">Acessar</span>
       </a>
       <a href="#cadastro" class="btn-pill btn-pill--primary">
@@ -51,7 +55,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      HERO
      ═══════════════════════════════════════════════════════════ -->
-<section class="hero pt-[68px]">
+<section class="hero">
   <div class="container-page relative" style="min-height: 640px;">
 
     <!-- Cars composition (right side) -->
@@ -120,8 +124,8 @@
 
       <!-- Feature 1 -->
       <article class="feature-card reveal" data-delay="200">
-        <div class="feature-illustration">
-          <img src="../img/CAR%203D.png" alt="" class="illus-3d illus-3d--car" />
+        <div class="feature-illustration feature-illustration--scene">
+          <img src="../img/Car_3d_full.png" alt="" class="illus-3d illus-3d--car" />
         </div>
         <h3 class="h3">Gestão centralizada</h3>
         <p class="body-md mt-2">
@@ -131,7 +135,7 @@
 
       <!-- Feature 2 -->
       <article class="feature-card reveal" data-delay="300">
-        <div class="feature-illustration">
+        <div class="feature-illustration feature-illustration--scene">
           <img src="../img/Mask%20group.png" alt="" class="illus-3d illus-3d--receipt" />
         </div>
         <h3 class="h3">Gerencie seus pagamentos</h3>
@@ -142,7 +146,7 @@
 
       <!-- Feature 3 -->
       <article class="feature-card reveal" data-delay="400">
-        <div class="feature-illustration">
+        <div class="feature-illustration feature-illustration--scene">
           <img src="../img/FONE%203D.png" alt="" class="illus-3d illus-3d--headphones" />
         </div>
         <h3 class="h3">Suporte ao seu time</h3>
@@ -382,6 +386,19 @@
   </div>
 </footer>
 
+
+<!-- ═══════════════════════════════════════════════════════════
+     MOBILE FLOATING CTA PILL — Figma 161:7814
+     Visible only <640px. Stays fixed at bottom on scroll.
+     ═══════════════════════════════════════════════════════════ -->
+<div class="floating-cta" role="navigation" aria-label="Ações principais">
+  <a href="#cadastro" class="floating-cta__primary">
+    Cadastrar empresa
+  </a>
+  <a href="#login" class="floating-cta__ghost" aria-label="Acessar conta">
+    <span class="material-symbols-outlined" aria-hidden="true">person</span>
+  </a>
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════
      SCRIPTS
