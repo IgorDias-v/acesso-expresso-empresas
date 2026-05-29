@@ -1,10 +1,10 @@
 /* ─── Design Tokens ─────────────────────────── */
 
 :root {
-  /* Brand — AE Empresas (Figma 122:4657) */
-  --brand-primary-base: #277AB8;
-  --brand-primary-strong: #1F628F;
-  --brand-primary-soft: #DFEFF9;
+  /* Brand — AE Empresas / Salvador Shopping (sage-green palette derived from #6B7B62) */
+  --brand-primary-base: #6B7B62;
+  --brand-primary-strong: #4D5645;
+  --brand-primary-soft: #E8EDE3;
 
   --brand-secondary-base: #0F172A;
   --brand-secondary-strong: #000000;
@@ -17,7 +17,7 @@
 
   --bg-page: #F1F5F9;
   --bg-surface: #FFFFFF;
-  --bg-subtle: #DFEFF9;
+  --bg-subtle: #E8EDE3;
   --bg-emphasis: #0F172A;
 
   --border-default: #E2E8F0;
@@ -31,13 +31,13 @@
   --status-danger-soft: #FCE9EC;
   --status-danger-base: #B91C1C;
 
-  --hero-bg-from: #277AB8;
-  --hero-bg-to:   #093FA7;
+  --hero-bg-from: #6B7B62;
+  --hero-bg-to:   #2D3527;
 
-  --cta-bg: #277AB8;
-  --cta-bg-deep: #1F628F;
+  --cta-bg: #6B7B62;
+  --cta-bg-deep: #4D5645;
 
-  --footer-bg: #0F172A;
+  --footer-bg: #2a3027;
 }
 
 /* ─── Base ───────────────────────────────────── */
@@ -53,6 +53,10 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+img {
+  color: rgba(107, 123, 98, 1);
 }
 
 ::selection { background: var(--brand-primary-base); color: white; }
@@ -159,24 +163,26 @@ body {
 .brand-mark--ae  img { height: 30px; width: auto; display: block; }
 .brand-mark--rio img { height: 34px; width: auto; display: block; }
 
-/* Mobile: hide desktop header actions; CTA lives in the floating pill at bottom.
-   AE logo grows; RioMar swaps to icon-only via <picture> source. */
-@media (max-width: 639px) {
-  .site-header .header-actions { display: none !important; } /* beats Tailwind .flex */
-  .brand-mark--ae img { height: 44px; }
-  .brand-mark--rio img { height: 22px; } /* ICON_RIOMAR.svg native 47×22 */
-  .brand-group { gap: 14px; }
-  .brand-divider { height: 30px; }
-}
-@media (max-width: 339px) {
-  /* On ultra-narrow screens, drop the secondary brand to keep AE readable. */
-  .brand-divider, .brand-mark--rio { display: none; }
-}
 .brand-divider {
   width: 1px;
   height: 24px;
   background: var(--border-default);
   display: inline-block;
+}
+
+/* Mobile: matches RioMar header layout — AE at 276×44, Salvador icon at 37×22. */
+@media (max-width: 639px) {
+  .site-header .header-actions { display: none !important; } /* beats Tailwind .flex */
+  .site-header .container-page { padding-left: 12px; padding-right: 12px; }
+  .brand-mark { flex-shrink: 0; }
+  .brand-mark--ae  img { width: 276px; height: 44px; }
+  .brand-mark--rio img { width: 37px;  height: 22px; }
+  .brand-group { gap: 10px; }
+  .brand-divider { height: 30px; }
+}
+@media (max-width: 339px) {
+  /* On ultra-narrow screens, drop the secondary brand to keep AE readable. */
+  .brand-divider, .brand-mark--rio { display: none; }
 }
 
 /* Header pill buttons (Figma 122:4657) */
@@ -204,18 +210,18 @@ body {
   background: unset;
   background-color: unset;
   background-image: none;
-  color: rgba(39, 122, 184, 1);
+  color: rgba(107, 123, 98, 1);
   border: 1px solid var(--brand-primary-base);
 }
 .btn-pill--ghost iconify-icon {
-  color: rgba(39, 122, 184, 1);
+  color: rgba(107, 123, 98, 1);
 }
 .btn-pill--ghost:hover {
   background: unset;
   background-color: unset;
   background-image: none;
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px -16px rgba(39, 122, 184, 0.4);
+  box-shadow: 0 10px 24px -16px rgba(107, 123, 98, 0.4);
 }
 
 .btn-pill--primary {
@@ -227,7 +233,7 @@ body {
   background: var(--brand-primary-strong);
   border-color: var(--brand-primary-strong);
   transform: translateY(-1px);
-  box-shadow: 0 14px 30px -14px rgba(39, 122, 184, 0.6);
+  box-shadow: 0 14px 30px -14px rgba(107, 123, 98, 0.6);
 }
 .btn-pill--primary::after {
   content: "";
@@ -287,7 +293,7 @@ body {
   height: 48px;
   padding: 0 22px;
   border-radius: 999px;
-  background: var(--brand-primary, #277AB8);
+  background: var(--brand-primary, #6B7B62);
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-size: 15px;
@@ -295,7 +301,7 @@ body {
   letter-spacing: -0.005em;
   white-space: nowrap;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-  box-shadow: 0 8px 20px -10px rgba(39, 122, 184, 0.55);
+  box-shadow: 0 8px 20px -10px rgba(107, 123, 98, 0.55);
 }
 .floating-cta__primary:active { transform: scale(0.97); }
 
@@ -306,14 +312,14 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 999px;
-  border: 1px solid var(--brand-primary, #277AB8);
-  color: var(--brand-primary, #277AB8);
+  border: 1px solid var(--brand-primary, #6B7B62);
+  color: var(--brand-primary, #6B7B62);
   background: transparent;
   transition: background 0.25s ease, transform 0.25s ease;
 }
 .floating-cta__ghost iconify-icon,
 .floating-cta__ghost .material-symbols-outlined { font-size: 24px; line-height: 1; }
-.floating-cta__ghost:active { transform: scale(0.94); background: rgba(39, 122, 184, 0.08); }
+.floating-cta__ghost:active { transform: scale(0.94); background: rgba(107, 123, 98, 0.08); }
 
 @keyframes float-cta-in {
   from { opacity: 0; transform: translate(-50%, 24px); }
@@ -362,16 +368,16 @@ body {
 /* ─── Buttons ────────────────────────────────── */
 
 .btn-primary-dark {
-  background: rgba(0, 32, 92, 1);
+  background: rgba(42, 48, 39, 1);
   color: white;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
   position: relative;
   overflow: hidden;
 }
 .btn-primary-dark:hover {
-  background: rgba(0, 42, 110, 1);
+  background: rgba(42, 48, 39, 1);
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px -14px rgba(39, 122, 184, 0.55);
+  box-shadow: 0 14px 32px -14px rgba(107, 123, 98, 0.55);
 }
 .btn-primary-dark::after {
   content: "";
@@ -424,7 +430,7 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: linear-gradient(120deg, transparent 30%, rgba(39,122,184,0.12) 50%, transparent 70%);
+  background: linear-gradient(120deg, transparent 30%, rgba(107,123,98,0.12) 50%, transparent 70%);
   transform: translateX(-100%);
   pointer-events: none;
 }
@@ -458,6 +464,38 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right center;
+}
+
+/* ─── Mobile / Tablet hero illustration ──────────
+   On small viewports the absolute .hero-cars composition is hidden (no room for
+   floating tag cards). Replace it with a flat, full-width illustration sitting
+   below the title + subtitle to fill the negative space. */
+.hero-mobile-illustration {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .hero-mobile-illustration {
+    display: block;
+    position: relative;
+    margin-top: 36px;
+    margin-left: -24px;   /* bleed both edges so the image fills full viewport width */
+    margin-right: -24px;
+  }
+  .hero-mobile-illustration img {
+    width: calc(100% + 48px);
+    max-width: none;
+    height: auto;
+    display: block;
+    transform: scale(1.12);
+    transform-origin: center bottom;
+    filter: drop-shadow(0 28px 36px rgba(0, 0, 0, 0.32))
+            drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+  }
+}
+
+/* Hide in-hero CTA on mobile — replaced by the bottom floating-cta pill. */
+@media (max-width: 639px) {
+  .hero-content .hero-cta-row { display: none; }
 }
 
 /* ─── Hero floating tag-logo cards (Figma 122:4683) ───────── */
@@ -580,7 +618,7 @@ body {
   border-radius: 16px;
   background: radial-gradient(
     600px circle at var(--mx, 50%) var(--my, 50%),
-    rgba(39, 122, 184, 0.08),
+    rgba(107, 123, 98, 0.08),
     transparent 40%
   );
   opacity: 0;
@@ -676,7 +714,7 @@ body {
   align-items: center;
   justify-content: center;
   letter-spacing: 0.02em;
-  box-shadow: 0 6px 14px -6px rgba(39, 122, 184, 0.5);
+  box-shadow: 0 6px 14px -6px rgba(107, 123, 98, 0.5);
   opacity: 0;
   position: relative;
 }
@@ -904,7 +942,7 @@ body {
   position: absolute;
   top: -1px; left: 0; right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(39,122,184,0.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(107,123,98,0.6), transparent);
 }
 
 /* ─── Utilities ──────────────────────────────── */
@@ -926,7 +964,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.15;
-  color: rgba(39, 122, 184, 1);
+  color: rgba(107, 123, 98, 1);
 }
 .h3 {
   font-size: 18px;
